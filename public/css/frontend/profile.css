@@ -1,0 +1,446 @@
+.userpage {
+    display: flex;
+}
+
+.userpage-sidebar {
+    display: block;
+}
+
+.user-page-brief {
+    padding: 15px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.userpage-sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 27px 0 0;
+    cursor: pointer;
+}
+
+.user-page-brief .avatar,
+.user-page-brief__avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.avatar__img {
+    border-radius: 50%;
+}
+
+.avatar__img,
+.avatar__img-wrapper {
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+.user-page-brief__right {
+    flex: 1;
+    flex-direction: column;
+    padding-left: 15px;
+    overflow: hidden;
+}
+
+.user-page-brief__username {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    min-height: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.user-page-brief__guest {
+    color: #888;
+}
+
+.userpage-sidebar-menu-entry {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .8);
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    margin-bottom: 18px;
+    transition: color .1s cubic-bezier(.4, 0, .2, 1);
+}
+
+.userpage-sidebar-menu-entry__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    flex-shrink: 0;
+    margin-right: 12px;
+    font-size: .9375rem;
+}
+
+
+/* Account-tabs */
+
+.account-tabs {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 13%);
+    border-radius: .125rem;
+    overflow: auto;
+}
+
+.my-account-section {
+    flex-direction: column;
+    padding: 0 30px 20px;
+    background: #fff;
+    overflow: visible;
+    width: 1000px;
+}
+
+.my-account-section__header {
+    align-items: center;
+    border-bottom: 1px solid #efefef;
+    padding: 22px 0;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.my-account-section__header-left {
+    flex: 1;
+}
+
+.my-account-section__header-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.my-account-section__header-subtitle {
+    font-size: .875rem;
+    line-height: 1.0625rem;
+    color: #555;
+    margin-top: 3px;
+}
+
+.form-profile>form {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+.my-account-profile__left {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.my-account-profile__right {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-left: 1px solid #efefef;
+}
+
+.my-account-profile .input-with-label {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.my-account__input-text {
+    font-size: 14px;
+    color: #333;
+}
+
+.my-account-profile__change-button {
+    text-transform: capitalize;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.my-account__no-background-button {
+    border: none;
+    outline: none;
+    background: none;
+    color: #05a;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.my-account__inline-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-with-label__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.input-with-label__label {
+    width: 20%;
+    text-align: right;
+    color: rgba(85, 85, 85, .8);
+    text-transform: capitalize;
+    overflow: hidden;
+}
+
+.input-with-label__label>label {
+    margin-bottom: 0px;
+}
+
+.input-with-label__content,
+.input-with-label__error,
+.input-with-label__message {
+    width: 80%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 1.25rem;
+}
+
+.input-with-validator {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, .14);
+    box-sizing: border-box;
+    box-shadow: inset 0 2px 0 0 rgb(0 0 0 / 2%);
+    color: #222;
+    height: 40px;
+    padding: 10px;
+    transition: border-color .1s ease;
+}
+
+.input-with-validator input {
+    flex: 1;
+    font-size: 14px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.my-account-page__submit {
+    margin-bottom: 60px;
+    padding-left: calc(20% + 20px);
+}
+
+.btn--m {
+    height: 40px;
+    padding: 0 20px;
+    min-width: 70px;
+    max-width: 220px;
+}
+
+.avatar-uploader {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.avatar-uploader__avatar {
+    height: 100px;
+    width: 100px;
+    margin: 20px 0;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.avatar-uploader__file-input {
+    display: none;
+}
+
+.avatar-uploader__avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.swal-modal {
+    margin-left: -16px;
+}
+
+.tab-overflow_x {
+    width: 959px;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #d10024;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 4px solid !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #222;
+    font-size: 20px;
+}
+
+.order-content_header {
+    padding-bottom: 14px;
+}
+
+.order-content_header_order_id {
+    font-weight: bold;
+}
+
+.order-content_header_status {
+    border-left: 1px solid #e2d9d9;
+    padding-left: 20px;
+}
+
+.order-content_header_status_wrapper {
+    padding-right: 19px;
+}
+
+.order-content_header_status_wrapper>a {
+    text-decoration: none;
+    color: #444141;
+}
+
+.order-content_item_product {
+    display: flex;
+    flex-direction: row;
+}
+
+.order-content_item-name {
+    font-size: 20px;
+}
+
+.order-content_item_price {
+    display: flex;
+    align-items: center;
+}
+
+.order-content_item_detail-content {
+    flex: 1;
+}
+
+.order-content_item_image {
+    padding: 8px;
+}
+
+.order-image_wrapper>img {
+    width: 80px;
+    height: 80px;
+}
+
+.order-content_item-list {
+    padding-top: 16px;
+    padding-right: 16px;
+    border-top: 1px solid #e2d9d9;
+}
+
+.order-content_item-list:last-child {
+    border-bottom: 1px solid #e2d9d9;
+}
+
+.purchase-list-page_checkout {
+    background-color: #fff;
+    padding-top: 20px;
+    margin-bottom: 22px;
+}
+
+.account-tabs .tab-content {
+    background-color: #f5f5f5;
+}
+
+.purchase-card_button {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.purchase-card_button_total-payment,
+.purchase-card_button_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.purchase-card_button_label-price {
+    padding-right: 20px;
+}
+
+.purchase-card_button-show:first-child {
+    padding-right: 9px;
+}
+
+.purchase-card_button_total_price>h3 {
+    color: #D10024;
+}
+
+.btn-red {
+    background-color: #D10024;
+}
+
+.btn-light {
+    border: 1px solid #0b0c0b;
+}
+
+.rated {
+    display: inline-block;
+}
+
+.rated a {
+    font-size: 34px;
+    padding: 0 1px;
+    cursor: pointer;
+    color: #FFD119;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:1003px) {
+    .userpage {
+        display: block;
+    }
+    .userpage-sidebar {
+        display: none;
+    }
+}
