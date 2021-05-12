@@ -204,7 +204,7 @@
                                             </div>
                                         </div>
                                         <div class="add-to-cart">
-                                            <a href="{{asset('cart/add/'.$product->id)}}">
+                                            <a href="{{asset('cart/add/'.$product->id. '/1')}}">
                                                 <button class="add-to-cart-btn">
                                                     <i class="far fa-shopping-cart">
                                                     </i>

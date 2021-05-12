@@ -234,7 +234,7 @@
                     var response = JSON.parse(response);
                     response.forEach(element => {
                         var nf = Intl.NumberFormat();
-                        $('#fee_fetch').append(`<option value="${element['transport_fee']}" selected> ${nf.format(element['transport_fee'])}  đ</option>`);
+                        $('#fee_fetch').html(`<option value="${element['transport_fee']}" selected> ${nf.format(element['transport_fee'])}  đ</option>`);
                         var sub = <?php echo Cart::subtotal(0, "", "") ?>;
                         var totalfetch = sub + (element['transport_fee']);
                         $('.total_fetch').html(`<option value=" ${totalfetch}" selected> ${nf.format(totalfetch)} đ</option>`);
