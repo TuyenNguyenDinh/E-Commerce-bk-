@@ -71,6 +71,14 @@
     function btUpdate(qty, rowId) {
         if (qty < 1) {
             deleteCart(rowId)
+        }else if(qty > 10) {
+            if("{{ app()->getLocale() == 'en'}}"){
+                alert('Quantity exceeds stock, quantity in stock: {{}}');
+                window.location.reload();
+            }else{
+                alert('Số lượng vượt quá hàng trong kho, số lượng trong kho hàng:')
+                window.location.reload();
+            }
         } else {
             var url = "{{asset('cart/update')}}";
             $.ajax({

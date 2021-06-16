@@ -36,7 +36,7 @@
                             </td>
                             <td id="price" data-th="Price">{{number_format($product->price*$product->qty,0,',','.')}} đ</td>
                             <td data-th="Quantity">
-                                <input type="number" name="qty" id="qty" class="form-control form-control-lg text-center" value="{{ $product->qty }}" onchange="btUpdate(this.value, '{{$product->rowId}}')">
+                                <input type="number" name="qty" id="qty" class="form-control form-control-lg text-center" pattern="[0-9]{10}" min=1 value="{{ $product->qty }}" onchange="btUpdate(this.value, '{{$product->rowId}}')">
                             </td>
                             <td class="actions" data-th="">
                                 <div class="text-right">
@@ -75,9 +75,18 @@
     </div>
 </section>
 <script type="text/javascript">
+
     function btUpdate(qty, rowId) {
         if (qty < 1) {
             deleteCart(rowId)
+        }else if(qty > 10){
+            if("{{ app()->getLocale() == 'en'}}"){
+                alert('Sorry, you can only buy max 10');
+                window.location.reload();
+            }else{
+                alert('Xin lỗi, bạn chỉ có thể mua tối đa 10 sản phẩm')
+                window.location.reload();
+            }
         } else {
             var url = "{{asset('cart/update')}}";
             $.ajax({
@@ -89,8 +98,6 @@
                 },
                 success: function(response) {
                     console.log(response);
-
-                    // location.reload();
                 }
             });
         }

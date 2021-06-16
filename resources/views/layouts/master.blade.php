@@ -35,6 +35,11 @@
                         </li>
                         <li>
                             <a href="#">
+                                <i class="far fa-phone-alt"></i> {{$analyticsData}}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
                                 <i class="fas fa-envelope"></i> tuyennguyendinh1608@gmail.com
                             </a>
                         </li>

@@ -1,9 +1,10 @@
 <?php
 
+use App\Models\Products;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
-
+use Spatie\Analytics\Period;
 
 /*
 |--------------------------------------------------------------------------
@@ -136,3 +137,13 @@ Route::get('login/google', 'CustomerFrontendController@redirectToGoogle')->name(
 Route::get('login/google/callback', 'CustomerFrontendController@handleGoogleCallback');
 
 Route::get('/admin', 'HomeController@index')->name('admin');
+
+Route::get('/data', function(){
+    $data = Analytics::fetchTopBrowsers(Period::days(7));
+    dd($data);
+});
+
+Route::get('/countvisits', function(){
+    $post = Products::find(1);
+    visits($post)->count();
+});

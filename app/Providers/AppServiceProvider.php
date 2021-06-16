@@ -5,7 +5,8 @@ namespace App\Providers;
 use App\Models\Categories;
 use App\Models\Province;
 use Illuminate\Support\ServiceProvider;
-
+use Spatie\Analytics\Period;
+use Spatie\Analytics\AnalyticsFacade as Analytics;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -26,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $data['categories'] = Categories::all();
+        $data['analyticsData'] = Analytics::fetchVisitorsAndPageViews(Period::days(1));
         view()->share($data);
     }
 }
